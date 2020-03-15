@@ -33,7 +33,9 @@ func main()  {
 	//extendsCap();
 	//nilTest();
 	//sliceValueTest();
-	multiSlice();
+	//multiSlice();
+	countriesNeeded := countries()
+	fmt.Println(countriesNeeded)
 }
 
 
@@ -140,4 +142,12 @@ func multiSlice()  {
 		fmt.Println("")
 	}
 
+}
+
+func countries() []string{
+	countries := []string{"USA", "Singapore", "Germany", "India", "Australia"}
+	neededContires := countries[:len(countries) -2];
+	contiriescp := make([]string,len(neededContires))
+	copy(contiriescp,neededContires)
+   return contiriescp;
 }
